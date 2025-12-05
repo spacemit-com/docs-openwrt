@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # 下载和编译
 
 以下文档基于ubuntu22.04描述.
@@ -25,7 +21,7 @@ python3-distutils rsync unzip zlib1g-dev file wget jq device-tree-compiler
 git clone https://gitee.com/bianbu-linux/openwrt.git -b bl-v2.0.y
 ```
 
-## 拉取feeds
+## 拉取 feeds
 
 首次或想更新包时需要运行以下命令。更新包会从 OpenWrt 官网等下载压缩包，请确保网络可用。如果出现某些包下载失败，可重复执行命令
 
@@ -49,13 +45,13 @@ make -j12 V=s
 
 ## 清理
 
-* 全部清理命令，会把`bin`、`build_dir`、`staging_dir`、`feeds`、`dl`等目录以及`.config`文件都删掉,代码仓库为最原始的状态
+- 全部清理命令，会把`bin`、`build_dir`、`staging_dir`、`feeds`、`dl`等目录以及`.config`文件都删掉,代码仓库为最原始的状态
 
 ```sh
 make distclean
 ```
 
-* 局部清理命令，会把编译输出目录`bin、build_dir、staging_dir`删掉，不包含`dl`目录、`.config`文件等
+- 局部清理命令，会把编译输出目录`bin、build_dir、staging_dir`删掉，不包含`dl`目录、`.config`文件等
 
 ```sh
 make dirclean
@@ -65,13 +61,13 @@ make dirclean
 
 ### 单编uboot
 
-* 编译
+- 编译
 
 ```sh
 make package/boot/uboot-spacemit/compile V=s
 ```
 
-* 清理
+- 清理
 
 ```sh
 make package/boot/uboot-spacemit/clean V=s
@@ -79,13 +75,13 @@ make package/boot/uboot-spacemit/clean V=s
 
 ### 单编opensbi
 
-* 编译
+- 编译
 
 ```sh
 make package/boot/opensbi-spacemit/compile V=s
 ```
 
-* 清理
+- 清理
 
 ```sh
 make package/boot/opensbi-spacemit/clean V=s
@@ -93,13 +89,13 @@ make package/boot/opensbi-spacemit/clean V=s
 
 ### 单编linux
 
-* 编译
+- 编译
 
 ```sh
 make target/linux/compile V=s
 ```
 
-* 清理
+- 清理
 
 ```sh
 make target/linux/clean V=s
@@ -109,13 +105,13 @@ make target/linux/clean V=s
 
 其他包的编译都类似一下的编译方式
 
-* 编译
+- 编译
 
 ```sh
 make package/utils/adb/compile V=s
 ```
 
-* 清理
+- 清理
 
 ```sh
 make package/utils/adb/clean V=s
@@ -129,8 +125,8 @@ make package/utils/adb/clean V=s
 
 ## 支持设备列表
 
-* BPI-F3
-* MUSE-Pi
+- BPI-F3
+- MUSE-Pi
 
 ## 软路由
 
@@ -156,11 +152,11 @@ HOSTLDLIBS_extract-cert =  -lcrypto -pthread
 
 2. 如果需要手动更新最新的 `uboot/opensbi/linux` 版本，可参考一下方式
 
-   * 确认 gitee 仓库的最新版本的 tar 包已经上传到`https://archive.spacemit.com/openwrt/dl/`，如 `linux-6.1-v1.0.15.tar.xz`
+   - 确认 gitee 仓库的最新版本的 tar 包已经上传到`https://archive.spacemit.com/openwrt/dl/`，如 `linux-6.1-v1.0.15.tar.xz`
 
-   ![alt text](static/image.png)
+   <img src="static/image.png" alt="" width="800">
 
-   * 更改Makefile版本号
+   - 更改 Makefile 版本号
 
 ```diff
 diff --git a/package/boot/opensbi-spacemit/Makefile b/package/boot/opensbi-spacemit/Makefile
@@ -204,15 +200,16 @@ index ac230af366..148e5a79b8 100644
  LINUX_KERNEL_HASH:=skip
  endif
 
-```sh
-* 更新kernel config
+```
+
+- 更新 kernel config
 
 ```sh
 make kernel_menuconfig
 ```
 
-   * 编译
-     可能会出现失败，如果编译异常，请根据报错原因修正
+- 编译
+   可能会出现失败，如果编译异常，请根据报错原因修正
 
 ```sh
 make -j12 V=s
@@ -222,7 +219,7 @@ make -j12 V=s
 
 SpacemiT 维护一套预编译的安装包，可通过更改源来下载安装
 
-* 修改软件源地址（基于设备上修改）
+- 修改软件源地址（基于设备上修改）
    `bl-v2.0.y` 为具体版本的标签，请根据需求来修改。
 
 ```sh

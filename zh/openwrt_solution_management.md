@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # 方案管理
 
 本文档介绍进迭 OpenWrt SDK 的方案管理，目前发行的 SDK 默认适配 k1-sbc。
@@ -64,17 +60,17 @@ SUBTARGETS 添加方案名称
 
 创建跟方案名称同名目录：`k1-sbc`，包含以下内容
 
-* `openwrt/target/linux/spacemit/k1-sbc/config-6.1`
+- `openwrt/target/linux/spacemit/k1-sbc/config-6.1`
 
   `config-6.1` 为方案的 Kernel 配置，编译 Kernel 时合并 `openwrt/target/linux/generic/config-6.1` 与本方案 `config-6.1`，相同的配置选项以本方案为主
 
-* `openwrt/target/linux/spacemit/k1-sbc/target.mk`
+- `openwrt/target/linux/spacemit/k1-sbc/target.mk`
 
   定义方案的通用信息，如 `DEVICE_TYPE:=router`。
 
   此为 OpenWrt 定义，不同 device type 默认包含不同软件包
 
-* `openwrt/target/linux/spacemit/k1-sbc/base-files/`
+- `openwrt/target/linux/spacemit/k1-sbc/base-files/`
 
   包含要打包进 rootfs 的配置文件，如下：
 
@@ -118,9 +114,9 @@ openwrt/target/linux/spacemit/k1-sbc/base-files$ tree
 
 也可自行添加跟板载存储介质容量一致的分区表，TitanFlasher工具烧写固件时自动匹配
 
-* `partition_2M.json`，用于nor刷机启动，一般与 emmc/ssd 等 blk 设备一起使用
-* `partition_universal.json`，用于 blk 设备的刷机启动，
-* `partition_flash.json`，用于 SpacemiT Titanflasher 工具制作卡量产
+- `partition_2M.json`，用于nor刷机启动，一般与 emmc/ssd 等 blk 设备一起使用
+- `partition_universal.json`，用于 blk 设备的刷机启动，
+- `partition_flash.json`，用于 SpacemiT Titanflasher 工具制作卡量产
 
 修改分区表可能会影响到系统正常启动，详细的修改方式请参考[启动开发指南](https://bianbu-linux.spacemit.com/device/boot/)
 
@@ -214,7 +210,7 @@ openwrt/target/linux/spacemit/k1-sbc/target.mk
 
 每个方案下至少有一个或多个板型，新增板型支持可参考[设备管理](openwrt_device_management.md)
 
-### uboot/opensbi编译配置
+### uboot/opensbi 编译配置
 
 如有需要增加 `uboot/opensbi` 新的编译配置，可参考修改以下内容
 

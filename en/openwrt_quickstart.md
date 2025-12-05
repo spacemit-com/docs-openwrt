@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Download and Build
 
 This document is based on Ubuntu 22.04
@@ -23,7 +19,6 @@ The code repository has two branches:`bl-v1.0.y` and `bl-v2.0.y`, which correspo
 
 ```sh
 git clone https://gitee.com/bianbu-linux/openwrt.git -b bl-v2.0.y
-
 ```
 
 ## Feeds
@@ -45,13 +40,13 @@ The image will be generated at `bin/targets/spacemit/DEVICE_debX/` directory wit
 
 ### Cleaning
 
-* The full cleanup command will delete directories such as `bin, build_dir, staging_dir, feeds, dl`, as well as the `.config` file, returning the code repository to its original state.
+- The full cleanup command will delete directories such as `bin, build_dir, staging_dir, feeds, dl`, as well as the `.config` file, returning the code repository to its original state.
 
 ```sh
 make distclean
 ```
 
-* The partial cleanup command will delete the build output directories such as `bin`, `build_dir`, `staging_dir`, but it will not remove the dl directory, the `.config` file, or other similar files.
+- The partial cleanup command will delete the build output directories such as `bin`, `build_dir`, `staging_dir`, but it will not remove the dl directory, the `.config` file, or other similar files.
 
 ```sh
 make dirclean
@@ -61,13 +56,13 @@ make dirclean
 
 ### build uboot
 
-* compile
+- compile
 
 ```sh
 make package/boot/uboot-spacemit/compile V=s
 ```
 
-* clean
+- clean
 
 ```sh
 make package/boot/uboot-spacemit/clean V=s
@@ -75,13 +70,13 @@ make package/boot/uboot-spacemit/clean V=s
 
 ### build opensbi
 
-* compile
+- compile
 
 ```sh
 make package/boot/opensbi-spacemit/compile V=s
 ```
 
-* clean
+- clean
 
 ```sh
 make package/boot/opensbi-spacemit/clean V=s
@@ -89,13 +84,13 @@ make package/boot/opensbi-spacemit/clean V=s
 
 ### build linux
 
-* compile
+- compile
 
 ```sh
 make target/linux/compile V=s
 ```
 
-* clean
+- clean
 
 ```sh
 make target/linux/clean V=s
@@ -105,13 +100,13 @@ make target/linux/clean V=s
 
 The compilation process for other packages is similar to the following method.
 
-* compile
+- compile
 
 ```sh
 make package/utils/adb/compile V=s
 ```
 
-* clean
+- clean
 
 ```sh
 make package/utils/adb/clean V=s
@@ -125,8 +120,8 @@ Firmware `*sdcard.img`: Can be written to the card using the `dd` command. The d
 
 ## Supported Devices List
 
-* BPI-F3
-* MUSE-Pi
+- BPI-F3
+- MUSE-Pi
 
 ## Soft Router Functionality
 
@@ -152,11 +147,12 @@ HOSTLDLIBS_extract-cert =  -lcrypto -pthread
 
 2. If it is necessary to manually update to the latest versions of U-Boot/OpenSBI/Linux, please follow these steps:
 
-   * Confirm that the latest version tarball has been uploaded to`https://archive.spacemit.com/openwrt/dl/`，such as `linux-6.1-v1.0.15.tar.xz`
+   - Confirm that the latest version tarball has been uploaded to`https://archive.spacemit.com/openwrt/dl/`，such as `linux-6.1-v1.0.15.tar.xz`
 
-   ![alt text](static/image.png)
+   <img src="static/image.png" alt="" width="800">
+   
 
-   * Changing the Version Number in the Makefile
+   - Changing the Version Number in the Makefile
 
 ```diff
 diff --git a/package/boot/opensbi-spacemit/Makefile b/package/boot/opensbi-spacemit/Makefile
@@ -199,16 +195,16 @@ index ac230af366..148e5a79b8 100644
  LINUX_SOURCE:=$(LINUX_VERSION_CUSTOM).tar.xz
  LINUX_KERNEL_HASH:=skip
  endif
+```
 
-```sh
-* update kernel config
+- update kernel config
 
 ```sh
 make kernel_menuconfig
 ```
 
-   * compile 
-     There may be compliation failures. If any errors are encountered, please refer to the error message to identify and resolve the issues.
+- compile 
+  There may be compliation failures. If any errors are encountered, please refer to the error message to identify and resolve the issues.
 
 ```sh
 make -j12 V=s
@@ -218,7 +214,7 @@ make -j12 V=s
 
 SpacemiT maintains a set of pre-compiled packages that can be downloaded and installed by changing the source.
 
-* Modify the software source address (based on device modifications):
+- Modify the software source address (based on device modifications):
   `bl-v2.0.y` is a specific version tag. Please modify it according to your needs.
   If using the SBC solution, change `DEVICE_MUSE-N1` to `DEVICE_debX`.
 

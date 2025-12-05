@@ -1,13 +1,6 @@
----
-sidebar_position: 4
----
-
-
-
 # Solution Management
 
 This document introduces SpacemiT's solution management for the OpenWrt SDK. The current released SDK supports the k1-sbc, which supports for multiple board types; for example, the k1-sbc solution supports the k1-x_MUSE-Pi and k1-x_deb1 board types. Further updates will be released in the future.
-
 
 ## Solution Overview
 
@@ -66,15 +59,15 @@ Add the name of the solution to SUBTARGETS:
 
 Create a directory with the same name as the solution: k1-sbc, containing the following:
 
-* `openwrt/target/linux/spacemit/k1-sbc/config-6.1`
+- `openwrt/target/linux/spacemit/k1-sbc/config-6.1`
 
   `config-6.1` is the kernel configuration for this solution. When compiling the kernel, merge `openwrt/target/linux/generic/config-6.1` with this solution's `config-6.1`, giving priority to the options specified here.
 
-* `openwrt/target/linux/spacemit/k1-sbc/target.mk`
+- `openwrt/target/linux/spacemit/k1-sbc/target.mk`
 
   Defines general information for the solution, such as `DEVICE_TYPE:=router` (optional values include router, nas). This is defined by OpenWrt, where different device types include different default packages.
 
-* `openwrt/target/linux/spacemit/k1-sbc/base-files/`
+- `openwrt/target/linux/spacemit/k1-sbc/base-files/`
 
   Contains configuration files to be packaged into the root file system, such as:
 
@@ -193,7 +186,6 @@ TARGET_DEVICES += debX
 `openwrt/target/linux/spacemit/base-files/etc/uci-defaults/`
 
 The defualt settings of the Unified Configuration interface (UCI) provide a mechanism to preconfigure the firmare image using UCI commands. Scripts placed in this directory will be executed automatically during the first boot to apply system defaults.
-
 
 ## Adding a New Solution
 

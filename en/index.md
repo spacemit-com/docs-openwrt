@@ -1,8 +1,3 @@
----
-slug: /
-sidebar_position: 1
----
-
 # OpenWrt
 
 A Board Support Package (BSP) based on native OpenWrt 23.05 (*bl-v2.0.y based on master*) that integrates SpacemiT's Stone series chips. It includes, among others, the supervisor program interface (OpenSBI), bootloader (U-Boot/UEFI), Linux kernel, root file system (including various middleware and libraries), and examples applications. Its goal is to provide customers with support for soft routing and NAS scheme soluitions, and to enable the development of drivers or applications.

@@ -1,9 +1,4 @@
----
-slug: /
-sidebar_position: 1
----
-
-# # OpenWrt
+# OpenWrt
 
 基于原生 OpenWrt 23.05(*bl-v2.0.y分支基于master*)集成 SpacemiT Stone 系列芯片的 BSP，包含监管程序接口（OpenSBI）、引导加载程序（U-Boot/UEFI）、Linux 内核、根文件系统（包含各种中间件和库）以及示例等。其目标是为客户提供软路由和NAS方案支持，并且可以开发驱动或应用。
 

@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # 设备管理
 
 本文档介绍如何通过 EEPROM 实现自适应设备(板型)，包括如何添加新板型支持和实现自适应启动。
@@ -12,7 +8,7 @@ sidebar_position: 3
 
 以下以新增 k1-x_MUSE-Pi 板型为例说明
 
-### kernel设备树
+### Kernel 设备树
 
 如参考 deb1 硬件设计，则拷贝 `k1-x_deb1.dts` 到如下文件，修改相应内容
 
@@ -23,7 +19,7 @@ target/linux/spacemit/dts/k1-x_MUSE-Pi.dts
 
 对于新增的版型，dts文件均存放在以上目录。编译的时候打包进 bootfs 分区，uboot 启动 Kernel 前加载设备树文件。
 
-### uboot设备树
+### uboot 设备树
 
 新增板型需要在 uboot 源码仓库修改，如下：
 
@@ -126,11 +122,11 @@ uboot-2022.10/arch/riscv/dts/k1-x_spl.dts
 uboot-2022.10/arch/riscv/dts/k1-x_*.dts
 ```
 
-### EEPROM支持列表
+### EEPROM 支持列表
 
 - `atmel,24c02`
 
-### 添加新EEPROM
+### 添加新 EEPROM
 
 1. 修改 `uboot-2022.10/arch/riscv/dts/k1-x_spl.dts`，更新 EEPROM 的 I2C 地址，例如新地址为 `0xA0`。
 

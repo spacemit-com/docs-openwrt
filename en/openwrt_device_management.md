@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Device Management
 
 This document explains how to enable adaptive device (board type) support using EEPROM, including the steps to add new board types and implement adaptive booting.

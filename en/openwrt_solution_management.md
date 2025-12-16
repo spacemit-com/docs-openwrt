@@ -1,3 +1,5 @@
+sidebar_position: 4
+
 # Solution Management
 
 This document introduces SpacemiT's solution management for the OpenWrt SDK. The current released SDK supports the k1-sbc, which supports for multiple board types; for example, the k1-sbc solution supports the k1-x_MUSE-Pi and k1-x_deb1 board types. Further updates will be released in the future.

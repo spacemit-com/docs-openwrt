@@ -1,3 +1,5 @@
+sidebar_position: 4
+
 # 方案管理
 
 本文档介绍进迭 OpenWrt SDK 的方案管理，目前发行的 SDK 默认适配 k1-sbc。

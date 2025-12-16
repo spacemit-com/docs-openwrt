@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # Download and Build
 
 This document is based on Ubuntu 22.04

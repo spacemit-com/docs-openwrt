@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # 下载和编译
 
 以下文档基于ubuntu22.04描述.

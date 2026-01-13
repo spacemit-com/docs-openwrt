@@ -1,6 +1,6 @@
 # OpenWrt
 
-- [简介](intro.md)
+- [简介](root_overview.md)
 - [下载和编译](openwrt_quickstart.md)
 - [设备管理](openwrt_device_management.md)
 - [方案管理](openwrt_solution_management.md)

@@ -6,4 +6,4 @@ OpenWrt support device list is here
 
 ## MUSE Pi
 
-Refer to [MUSE Pi](https://bianbu.spacemit.com/bianbu-nas/device_list/muse_pi) for more details.
+Refer to [MUSE Pi](https://www.spacemit.com/community/document/info?lang=en&nodepath=hardware/eco/k1_muse_pi/root_overview.md) for more details.

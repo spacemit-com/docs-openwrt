@@ -117,7 +117,7 @@ It is possible to add a new partition table that matches the capacity of the onb
 - `partition_universal.json` — Used for booting from block devices
 - `partition_flash.json` — Used for mass production with the Titan Flasher Tool
 
-**Note:** Modifying the partition table may affect the normal boot process of the system. For detailed modification instructions, please refer to refer to the [Boot Develepment Guide](https://bianbu-linux.spacemit.com/en/device/boot/).
+**Note:** Modifying the partition table may affect the normal boot process of the system. For detailed modification instructions, please refer to refer to the [Boot Develepment Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=software/SDK/buildroot/device/boot.md).
 
 ### Boot Parameters for the Solution
 

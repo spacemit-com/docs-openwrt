@@ -120,7 +120,7 @@ openwrt/target/linux/spacemit/k1-sbc/base-files$ tree
 - `partition_universal.json`，用于 blk 设备的刷机启动，
 - `partition_flash.json`，用于 SpacemiT Titanflasher 工具制作卡量产
 
-修改分区表可能会影响到系统正常启动，详细的修改方式请参考[启动开发指南](https://bianbu-linux.spacemit.com/device/boot/)
+修改分区表可能会影响到系统正常启动，详细的修改方式请参考[启动开发指南](https://www.spacemit.com/community/document/info?lang=zh&nodepath=software/SDK/buildroot/device/boot.md)
 
 ### 方案启动参数
 

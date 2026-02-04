@@ -121,7 +121,7 @@ make package/utils/adb/clean V=s
 
 ## 烧写
 
-固件 `*.zip`，使用 Titan Flasher 工具刷写至设备板载存储介质，刷机工具使用参考[刷机工具使用](https://developer.spacemit.com/documentation?token=O6wlwlXcoiBZUikVNh2cczhin5d)
+固件 `*.zip`，使用 Titan Flasher 工具刷写至设备板载存储介质，刷机工具使用参考[刷机工具使用](https://www.spacemit.com/community/document/info?lang=zh&nodepath=tools/user_guide/flasher_user_guide.md)
 
 固件 `*sdcard.img`，可使用 `dd` 命令写至卡上，设备插卡上电即可实现卡启动
 

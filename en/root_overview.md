@@ -40,4 +40,4 @@ More components are being adapted, in particular:
 The following hardware devices are currently supported:
 
 - BPI-F3
-- [MUSE Pi](supported_devices/muse_pi.md)
+- [MUSE Pi](support_devices.md)

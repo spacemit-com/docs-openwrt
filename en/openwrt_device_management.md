@@ -108,7 +108,7 @@ By default, FSBL supports dual CS DDR. To enable support for single CS DDR, modi
    };
 ```
 
-If the device has an EEPROM, adaptive support can be enabled through it. The relevant key name is `ddr_cs_num`, which can be programmed using the Titan Flash Tool. Please refer [Flash Tool](https://developer.spacemit.com/documentation?token=B9JCwRM7RiBapHku6NfcPCstnqh) for more details.
+If the device has an EEPROM, adaptive support can be enabled through it. The relevant key name is `ddr_cs_num`, which can be programmed using the Titan Flash Tool. Please refer [Flash Tool](https://www.spacemit.com/community/document/info?lang=en&nodepath=tools/user_guide/flasher_user_guide.md) for more details.
 
 ## Adaptive Booting via EEPROM
 

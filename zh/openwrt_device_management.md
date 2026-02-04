@@ -109,7 +109,7 @@ FSBL 默认支持双 CS DDR，修改 `uboot-2022.10/arch/riscv/dts/k1-x_spl.dts`
    };
 ```
 
-如果设备有 EEPROM，支持通过 EEPROM 实现自适应，对应的 key_name 为`ddr_cs_num`,可用 Titantools 工具写号。刷机工具的时候请参考文档[刷机工具使用](https://developer.spacemit.com/documentation?token=O6wlwlXcoiBZUikVNh2cczhin5d)
+如果设备有 EEPROM，支持通过 EEPROM 实现自适应，对应的 key_name 为`ddr_cs_num`,可用 Titantools 工具写号。刷机工具的时候请参考文档[刷机工具使用](https://www.spacemit.com/community/document/info?lang=zh&nodepath=tools/user_guide/flasher_user_guide.md)
 
 ## 通过 EEPROM 实现自适应
 

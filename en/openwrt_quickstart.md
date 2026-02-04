@@ -116,7 +116,7 @@ make package/utils/adb/clean V=s
 
 ## Flashing
 
-Firmware `*.zip`: can be flashed to the device's onboard storage using the Titan Flasher Tool, please refer to [Flash tools](https://developer.spacemit.com/documentation?token=B9JCwRM7RiBapHku6NfcPCstnqh) for detailed instructions.
+Firmware `*.zip`: can be flashed to the device's onboard storage using the Titan Flasher Tool, please refer to [Flash tools User Guide](https://www.spacemit.com/community/document/info?lang=en&nodepath=tools/user_guide/flasher_user_guide.md) for detailed instructions.
 
 Firmware `*sdcard.img`: Can be written to the card using the `dd` command. The device can boot from the card once it is inserted and powered on.
 

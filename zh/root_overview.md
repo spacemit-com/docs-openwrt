@@ -40,4 +40,4 @@ sidebar_position: 1
 目前支持以下硬件设备:
 
 - BPI-F3
-- [MUSE Pi](supported_devices/muse_pi.md)
+- [MUSE Pi](support_devices.md)
